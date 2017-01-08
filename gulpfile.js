@@ -70,7 +70,11 @@ gulp.task('sprite', ['createSprites'], function () {
 
 gulp.task("concatScripts", function () {
     return gulp.src([
-            'js/lightboxjs/lightbox.js'
+            'js/jquery.js',
+        'js/fastclick.js',
+        'js/foundation.js',
+        'js/foundation.equalizer.js',
+        'js/foundation.reveal.js'
         ])
         .on('error', swallowError)
         .pipe(concat('app.js'))
